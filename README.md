@@ -23,7 +23,7 @@ For a new, unseen input, the trained model predicts the most likely class based 
 Evaluation
 Model performance is evaluated using metrics such as accuracy, precision, recall, F1-score, and confusion matrix.
 
-Types of Classification
+========================================Types of Classification==================================
 
 Binary Classification
 
@@ -53,7 +53,8 @@ Gradient Boosting
 
 Neural Networks
 
-Applications
+
+======================Applications=========================
 
 Spam detection
 
