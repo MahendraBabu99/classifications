@@ -1,0 +1,107 @@
+Linear Discriminant Analysis (LDA)
+1. Definition
+
+Linear Discriminant Analysis (LDA) is a supervised machine learning algorithm used for classification and dimensionality reduction. It projects data onto a lower-dimensional space while maximizing class separability.
+
+2. Objective
+
+LDA aims to find a linear transformation that:
+
+Maximizes between-class variance
+
+Minimizes within-class variance
+
+This ensures that samples from different classes are as far apart as possible, while samples within the same class are tightly clustered.
+
+3. Assumptions
+
+LDA is based on the following assumptions:
+
+Data for each class follows a Gaussian (normal) distribution
+
+All classes share the same covariance matrix
+
+Features are continuous
+
+Observations are independent
+
+4. Mathematical Intuition
+Class Means
+
+For each class 
+μc​=Nc​1​i∈c∑​xi​	​
+
+Overall Mean
+μ=N1​i=1∑N​xi​	​
+
+Within-Class Scatter Matrix
+SW​=c∑​i∈c∑​(xi​−μc​)(xi​−μc​)T
+
+Between-Class Scatter Matrix
+SB​=c∑​Nc​(μc​−μ)(μc​−μ)T
+
+Optimization Objective
+
+W=argmax(∣WTSW​W∣∣WTSB​W∣​)
+
+This leads to solving a generalized eigenvalue problem.
+
+5. Dimensionality Reduction Property
+
+If there are C classes, LDA can produce at most:
+
+𝐶
+−
+1
+ components
+C−1 components
+
+Example:
+
+2 classes → 1 component
+
+3 classes → 2 components
+
+6. Classification Rule
+
+After projection:
+
+Each class is modeled using a Gaussian distribution
+
+A new sample is assigned to the class with the highest posterior probability
+
+7. LDA vs PCA
+Aspect	LDA	PCA
+Type	Supervised	Unsupervised
+Uses Labels	Yes	No
+Goal	Class separation	Variance maximization
+Components	≤ C − 1	≤ number of features
+8. When to Use LDA
+
+Use LDA when:
+
+You have labeled data
+
+Class distributions are approximately Gaussian
+
+Classes are linearly separable
+
+You want both dimensionality reduction and classification
+
+9. Limitations
+
+Performs poorly if covariance matrices differ significantly
+
+Not suitable for highly non-linear class boundaries
+
+Sensitive to outliers
+
+10. Common Applications
+
+Face recognition
+
+Medical diagnosis
+
+Text classification
+
+Pattern recognition
