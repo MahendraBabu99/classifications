@@ -1,0 +1,98 @@
+Quadratic Discriminant Analysis (QDA)
+1. Definition
+
+Quadratic Discriminant Analysis (QDA) is a supervised classification algorithm based on Bayesian decision theory. It models each class using a separate multivariate Gaussian distribution, allowing non-linear decision boundaries.
+
+2. Objective
+
+QDA aims to classify data points by:
+
+Estimating class-specific probability distributions
+
+Assigning a sample to the class with the highest posterior probability
+
+Unlike LDA, QDA allows each class to have its own covariance matrix, providing greater flexibility.
+
+3. Assumptions
+
+QDA makes the following assumptions:
+
+Features within each class follow a Gaussian distribution
+
+Each class has its own covariance matrix
+
+Features are continuous
+
+Observations are independent
+
+4. Mathematical Model
+Class-Conditional Probability
+
+For class 
+𝑐
+P(x∣y=c)=N(x∣μc​,Σc​)
+
+Discriminant Function
+
+The QDA discriminant function is:
+
+δc​(x)=−21​log∣Σc​∣−21​(x−μc​)TΣc−1​(x−μc​)+logP(y=c)
+
+A data point is assigned to the class with the maximum discriminant score.
+
+5. Why Decision Boundary Is Quadratic
+
+Because each class has its own covariance matrix, the resulting decision boundary includes quadratic terms in the feature space.
+This allows QDA to model curved and complex boundaries.
+
+6. QDA vs LDA
+Aspect	QDA	LDA
+Supervised	Yes	Yes
+Covariance	Different for each class	Same for all classes
+Decision Boundary	Quadratic (non-linear)	Linear
+Flexibility	High	Moderate
+Overfitting Risk	Higher	Lower
+Data Requirement	Large dataset	Smaller dataset
+7. When to Use QDA
+
+Use QDA when:
+
+Class boundaries are non-linear
+
+Each class has a distinct covariance structure
+
+You have enough training data
+
+LDA underfits the data
+
+8. Advantages
+
+Captures complex class relationships
+
+More expressive than LDA
+
+Performs well when class distributions differ significantly
+
+9. Limitations
+
+Requires estimating many parameters
+
+Sensitive to small sample sizes
+
+Can overfit when data is limited
+
+Computationally more expensive than LDA
+
+10. Common Applications
+
+Medical diagnostics
+
+Financial risk classification
+
+Pattern recognition
+
+Image and signal classification
+
+11. Key Insight
+
+LDA is a special case of QDA where all classes share the same covariance matrix.
