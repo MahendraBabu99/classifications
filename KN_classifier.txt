@@ -1,0 +1,86 @@
+K-Nearest Neighbors (KNN) Classifier
+1. Definition
+
+K-Nearest Neighbors (KNN) is a supervised, non-parametric, instance-based machine learning algorithm used for classification and regression.
+
+For classification, a data point is assigned the class that is most common among its K nearest neighbors in the feature space.
+
+2. Working Principle
+
+Choose the number of neighbors K
+
+Compute the distance between the test point and all training points
+
+Select the K closest points
+
+Assign the class by majority voting
+
+3. Distance Metrics
+
+Common distance functions:
+
+Euclidean distance
+
+d(x, y) = √ Σ (xi − yi)²
+
+Manhattan distance
+
+d(x, y) = Σ |xi − yi|
+
+Minkowski distance
+
+d(x, y) = ( Σ |xi − yi|^p )^(1/p)
+
+4. Important Characteristics
+
+No explicit training phase
+
+Stores the entire dataset in memory
+
+Sensitive to:
+
+Feature scale
+
+Noise
+
+Choice of K
+
+5. Choice of K
+
+Small K (e.g., 1) → low bias, high variance (overfitting)
+
+Large K → high bias, low variance (underfitting)
+
+Common practice: choose K using cross-validation
+
+6. Need for Feature Scaling
+
+Since KNN is distance-based, features must be scaled.
+
+Common methods:
+
+StandardScaler (mean = 0, std = 1)
+
+MinMaxScaler (range [0,1])
+
+Without scaling, features with larger magnitude dominate distance computation.
+
+7. Advantages
+
+Simple and intuitive
+
+No training time
+
+Works well with small datasets
+
+Handles non-linear decision boundaries
+
+8. Disadvantages
+
+Slow prediction for large datasets
+
+High memory usage
+
+Sensitive to irrelevant features
+
+Performs poorly in high dimensions (curse of dimensionality)
