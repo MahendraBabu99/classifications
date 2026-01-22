@@ -45,14 +45,7 @@ A data point is assigned to the class with the maximum discriminant score.
 Because each class has its own covariance matrix, the resulting decision boundary includes quadratic terms in the feature space.
 This allows QDA to model curved and complex boundaries.
 
-6. QDA vs LDA
-Aspect	QDA	LDA
-Supervised	Yes	Yes
-Covariance	Different for each class	Same for all classes
-Decision Boundary	Quadratic (non-linear)	Linear
-Flexibility	High	Moderate
-Overfitting Risk	Higher	Lower
-Data Requirement	Large dataset	Smaller dataset
+
 7. When to Use QDA
 
 Use QDA when:
