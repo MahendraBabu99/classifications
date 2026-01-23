@@ -1,0 +1,83 @@
+Nearest Centroid Classifier
+Overview
+
+The Nearest Centroid Classifier is a distance-based, supervised classification algorithm.
+It classifies a data point by assigning it to the class whose centroid (mean feature vector) is closest to the point.
+
+It is one of the simplest classification algorithms and is often used as a baseline model.
+
+Core Idea
+
+A data point belongs to the class whose average point (centroid) is nearest to it in feature space.
+
+How Nearest Centroid Classification Works
+
+Compute class centroids
+For each class c, compute the centroid:
+
+μc​=Nc​1​i∈c∑​xi​
+	​
+
+
+Measure distance
+Compute the distance between the query point and each class centroid
+(commonly Euclidean distance).
+
+Assign class label
+The class with the minimum distance is chosen:
+
+y^​=argcmin​∥x−μc​∥
+
+Distance Metrics Supported
+
+Euclidean distance (most common)
+
+Manhattan distance
+
+Cosine distance
+
+Relationship to Other Algorithms
+Algorithm	Relationship
+KNN	Uses all points
+Nearest Centroid	Uses class means only
+LDA	Uses centroids + covariance
+QDA	Uses centroids + class-specific covariance
+When to Use Nearest Centroid Classifier
+
+When you need a fast and interpretable classifier
+
+When classes are well separated
+
+When dataset is large but feature space is simple
+
+As a baseline model for comparison
+
+Advantages
+
+Extremely fast prediction
+
+Low memory usage
+
+Easy to interpret
+
+No hyperparameters
+
+Limitations
+
+Poor performance on non-linear boundaries
+
+Sensitive to outliers
+
+Assumes spherical class distribution
+
+Ignores class variance
+
+Common Applications
+
+Text classification (with TF-IDF features)
+
+Image feature classification
+
+Benchmarking and baselines
+
+Real-time systems
