@@ -1,0 +1,63 @@
+Complement Naive Bayes
+Explanation
+
+Complement Naive Bayes is a variation of the Naive Bayes classification algorithm.
+Instead of learning from the data belonging to a class, it learns from the complement of that class, meaning all data that does not belong to the class.
+
+This change helps improve performance when the dataset is imbalanced, where some classes have many samples and others have very few.
+
+Core Idea
+
+A class is predicted by comparing a data point against information learned from all other classes.
+
+Why Complement Naive Bayes Exists
+
+Standard Naive Bayes can perform poorly when:
+
+Classes are highly imbalanced
+
+Some classes have very little data
+
+Complement Naive Bayes addresses this by:
+
+Reducing bias toward frequent classes
+
+Producing more stable decision boundaries
+
+How It Differs from Multinomial Naive Bayes
+
+Multinomial Naive Bayes learns from data inside each class
+
+Complement Naive Bayes learns from data outside each class
+
+This makes Complement Naive Bayes more robust for text and count-based classification tasks.
+
+Where It Is Used
+
+Text classification
+
+Document categorization
+
+Spam detection
+
+Sentiment analysis
+
+Advantages
+
+Handles class imbalance better
+
+More stable than standard Naive Bayes
+
+Works well with count-based data
+
+Limitations
+
+Still assumes feature independence
+
+Mainly designed for multinomial (count) data
+
+Not suitable for continuous features
+
+One-Line Summary
+
+Complement Naive Bayes classifies data by learning from everything except the target class, making it effective for imbalanced datasets.
