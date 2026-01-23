@@ -1,1 +1,37 @@
+Multinomial Distribution
+Explanation
 
+A multinomial distribution is used when there are multiple possible outcomes and an experiment is repeated a fixed number of times.
+Instead of tracking each individual outcome, we record how many times each outcome occurs.
+
+Each outcome represents a category, and the final result is a set of counts, one for each category. The total of all counts is equal to the number of trials performed.
+
+Key Points
+
+Multiple discrete outcomes
+
+Fixed number of trials
+
+Data is represented as counts
+
+Counts are non-negative integers
+
+Counts together represent the full outcome
+
+Intuition
+
+Think of repeating the same experiment many times and then summarizing the result by counting how often each category appeared.
+
+Usage
+
+Multinomial distribution is commonly used in:
+
+Text and document data represented as word counts
+
+Event frequency analysis
+
+Probabilistic classification models
+
+One-Line Summary
+
+Multinomial distribution describes how many times each category occurs in a fixed number of observations.
