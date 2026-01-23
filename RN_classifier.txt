@@ -1,0 +1,91 @@
+Radius Neighbors Classifier
+Overview
+
+The Radius Neighbors Classifier is a distance-based, supervised classification algorithm.
+It assigns a class label to a data point based on the labels of all training samples within a fixed radius around that point.
+
+It is a variant of K-Nearest Neighbors (KNN), but instead of using a fixed number of neighbors, it uses a fixed distance threshold.
+
+Core Idea
+
+A data point belongs to the class that is most common among all training points lying within a specified radius.
+
+How Radius Neighbors Classification Works
+
+Choose a radius 
+𝑟
+r
+This defines the neighborhood size around a query point.
+
+Compute distances
+Calculate the distance between the query point and all training points
+(commonly Euclidean distance).
+
+Select neighbors within the radius
+Only points satisfying:
+
+distance(x,xi​)≤r
+
+Majority voting
+The predicted class is the most frequent class among selected neighbors.
+
+No neighbors case
+If no points fall within the radius:
+
+The model may return no prediction
+
+
+Distance Metrics Supported
+
+Euclidean distance
+
+Manhattan distance
+
+Minkowski distance
+
+Custom distance functions
+
+When to Use Radius Neighbors Classifier
+
+Data has varying density
+
+You want local influence only
+
+You want to ignore far-away points
+
+Clusters have meaningful spatial boundaries
+
+Advantages
+
+Simple and intuitive
+
+Adapts to local data density
+
+No training phase (lazy learning)
+
+Flexible distance metrics
+
+Limitations
+
+Sensitive to radius selection
+
+Poor performance in high-dimensional data
+
+No prediction if neighborhood is empty
+
+Computationally expensive for large datasets
+
+Common Applications
+
+Spatial data classification
+
+Anomaly-aware classification
+
+Pattern recognition
+
+Small to medium-sized datasets
+
+Key Insight
+
+Radius Neighbors Classifier focuses on proximity, not count — classification depends on who lies close enough, not how many neighbors are forced.
+Or fall back to a default strategy (implementation-dependent)
