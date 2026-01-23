@@ -1,0 +1,29 @@
+Gaussian Naive Bayes (Gaussian NB)
+Overview
+
+Gaussian Naive Bayes is a probabilistic, supervised classification algorithm based on Bayes’ Theorem.
+It is used when features are continuous and are assumed to follow a Gaussian (normal) distribution within each class.
+
+Core Idea
+
+A data point belongs to the class for which the probability of observing its feature values is highest, assuming features are independent and normally distributed.
+
+Bayes’ Theorem
+
+Compute mean and variance of each feature per class
+
+Prediction Phase
+
+Compute likelihoods using the Gaussian formula
+
+Multiply likelihoods with class prior
+
+Choose the class with the highest posterior probability
+
+Key Assumptions
+
+Features are independent given the class
+
+Features follow a Gaussian distribution
+
+Equal importance of features
